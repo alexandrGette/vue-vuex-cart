@@ -29,18 +29,38 @@
           <p class="product-card__desc">{{ product.body }}</p>
           <div class="product-card__price">
             <span class="product-card__price_rub"
-              >{{ product.minPrice }} ₽ -</span
+              >{{
+                product.minPrice
+                  .toString()
+                  .replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$& ")
+              }}
+              ₽ -</span
             >
             <span class="product-card__price_rub">
-              {{ product.maxPrice }} ₽</span
+              {{
+                product.maxPrice
+                  .toString()
+                  .replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$& ")
+              }}
+              ₽</span
             >
           </div>
           <div class="product-card__price">
             <span class="product-card__price_eur"
-              >{{ Math.floor(product.minPrice / 88) }} € -</span
+              >{{
+                Math.floor(product.minPrice / 88)
+                  .toString()
+                  .replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$& ")
+              }}
+              € -</span
             >
             <span class="product-card__price_eur">
-              {{ Math.floor(product.maxPrice / 88) }} €</span
+              {{
+                Math.floor(product.maxPrice / 88)
+                  .toString()
+                  .replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$& ")
+              }}
+              €</span
             ><br />
           </div>
           <button class="product-card__button">Подробнее</button>

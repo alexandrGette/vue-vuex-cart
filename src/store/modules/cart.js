@@ -110,7 +110,8 @@ export default {
         cartTotalPrice(state, getters){
             return getters.allcartItems.reduce((totalPrice, cartItems) => {
                 return totalPrice + cartItems.price * cartItems.quantity
-            }, 0)
+            }, 0).toString()
+            .replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$& ")
         },
 
         cartTotalCount(state, getters){

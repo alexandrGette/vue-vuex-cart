@@ -11,6 +11,7 @@
 import Cart from "./components/Cart.vue";
 import Products from "./components/Products.vue";
 import style from "./assets/style/style.css";
+import normalize from "./assets/style/normalize.css";
 
 export default {
   name: "App",

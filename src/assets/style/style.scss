@@ -20,9 +20,48 @@ $color-brd-grey:#c4c4c4;
 }
 
 // корзина
-.cart {
+.cart__wrapper {
     display: flex;
     gap: 55px;
+}
+
+.cart__top {
+    position: relative;
+    width: max-content;
+    text-align: left;
+    margin-left: auto;
+
+    .cart-top__name {
+        margin: 0;
+        font-family: $main-font;
+        font-size: 14px;
+        line-height: 21px;
+        color: $color-text-black;
+    }
+
+    .cart-top__count {
+        margin: 0;
+        font-family: $main-font;
+        font-size: 12px;
+        line-height: 17px;
+        color: $color-text-grey;
+
+    }
+
+    .cart-top__price {
+        margin: 0;
+        font-family: $main-font;
+        font-size: 12px;
+        line-height: 17px;
+        color: $color-text-black;
+    }
+}
+
+.cart__top::before {
+    top: 20%;
+    left: -42px;
+    position: absolute;
+    content: url(../ant-design_shopping-cart-outlined.svg);
 }
 
 .cart__column_left {
